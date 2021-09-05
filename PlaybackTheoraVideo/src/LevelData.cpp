@@ -5,10 +5,10 @@
 
 CLevelData::CLevelData(Context* context) : 
 	Object(context),
-	scene(NULL),
-	camera(NULL),
-	cameraNode(NULL),
-	playerNode(NULL),
+	scene(nullptr),
+	camera(nullptr),
+	cameraNode(nullptr),
+	playerNode(nullptr),
 	yaw_(0.0f),
 	pitch_(0.0f)
 {
@@ -115,25 +115,25 @@ void CLevelData::ViewMove(float timeStep)
 	Quaternion worldRotation = cameraNode->GetWorldRotation();
 	worldRotation.z_ = 0.0f;
 	
-	if (input->GetKeyDown('W'))
+	if (input->GetKeyDown(KEY_W))
 		playerNode->Translate(worldRotation * Vector3::FORWARD * MOVE_SPEED * timeStep);
 
-	if (input->GetKeyDown('S'))
+	if (input->GetKeyDown(KEY_S))
 		playerNode->Translate(worldRotation * Vector3::BACK * MOVE_SPEED * timeStep);
 
-	if (input->GetKeyDown('A'))
+	if (input->GetKeyDown(KEY_A))
 		playerNode->Translate(worldRotation * Vector3::LEFT * MOVE_SPEED * timeStep);
 
-	if (input->GetKeyDown('D'))
+	if (input->GetKeyDown(KEY_D))
 		playerNode->Translate(worldRotation * Vector3::RIGHT * MOVE_SPEED * timeStep);
 
-	if (input->GetKeyDown('1'))
+	if (input->GetKeyDown(KEY_1))
 		tvc->Play();
 
-	if (input->GetKeyDown('2'))
+	if (input->GetKeyDown(KEY_2))
 		tvc->Pause();
 
-	if (input->GetKeyDown('3'))
+	if (input->GetKeyDown(KEY_3))
 		tvc->Stop();
 
 

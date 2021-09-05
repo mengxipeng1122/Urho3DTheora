@@ -7,7 +7,7 @@ TVComponent::TVComponent(Context* context) :
 	frameWidth_(0),
 	frameHeight_(0),
 	file_(0),
-	outputMaterial(0),
+	outputMaterial(nullptr),
 	prevTime_(0), 
 	prevFrame_(0),
 	framePlanarDataY_(0),
