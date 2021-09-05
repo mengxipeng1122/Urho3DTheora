@@ -34,7 +34,7 @@ set_target_properties(${TARGET_NAME}  PROPERTIES INCLUDE_DIRECTORIES "${TARGET_I
 
 
 #target_include_directories(${TARGET_NAME} PUBLIC src/TheoraPlayer/libtheora-1.1.1/include)
-link_libraries( -ltheora -logg )
+target_link_options(${TARGET_NAME} PRIVATE -L/usr/local/lib -ltheora -logg )
 
 
 

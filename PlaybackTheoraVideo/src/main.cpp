@@ -15,11 +15,11 @@ public:
     virtual void Setup()
     {
         // Called before engine initialization. engineParameters_ member variable can be modified here
-		engineParameters_["WindowWidth"] = 1280;
-		engineParameters_["WindowHeight"] = 720;
+		engineParameters_["WindowWidth"] = 800;
+		engineParameters_["WindowHeight"] = 600;
 		engineParameters_["FullScreen"] = false;
-		engineParameters_["VSync"] = true;
-		engineParameters_["FrameLimiter "] = true;
+		engineParameters_["VSync"] = false;
+		engineParameters_["FrameLimiter "] = false;
     }
     virtual void Start()
     {

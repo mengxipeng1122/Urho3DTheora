@@ -368,6 +368,9 @@ bool TVComponent::InitTexture()
 void TVComponent::UpdatePlaneTextures() 
 {
 	Graphics* graphics = GetSubsystem<Graphics>();
+    if(framePlanarDataU_==nullptr) return;
+    if(framePlanarDataY_==nullptr) return;
+    if(framePlanarDataV_==nullptr) return;
 
 	// Convert non-planar YUV-frame into separated planar raw-textures 
 	for (int y = 0; y < m_YUVFrame.uv_height; ++y)
